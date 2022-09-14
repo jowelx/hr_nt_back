@@ -1,10 +1,10 @@
-import {findAllUsers,findById,addUser} from '../src/db/controllers/users.js'
+import {findAllBill,findById,addBill} from '../src/db/controllers/Bill.js'
 import express from 'express'
 //Se definen las rutas y el procedimientos 
 const router = express.Router();
 
-router.get("/all",findAllUsers);
+router.get("/allBill",findAllBill);
 router.get("/:id",findById);
-router.post("/add",addUser);
+router.post("/addBill",addBill);
 
 export default router
