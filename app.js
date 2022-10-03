@@ -22,6 +22,7 @@ app.use('/api/bill',Api)
 app.get('/',(req,res)=>{
     res.send('funcionando')
 })
+
 //Initialization of database connection and server
 moongose.connect(
     'mongodb+srv://db-ark-trac:db-ark-trac@cluster0.df8hk.mongodb.net/marble_db?retryWrites=true&w=majority',
