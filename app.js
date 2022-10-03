@@ -16,7 +16,7 @@ app.use(cors());
 app.set('port', process.env.PORT || 4000)
 //middlewares
 app.use(morgan('dev'))
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ limit: '500mb' }));
 app.use('/api/bill',Api)
 app.get('/',(req,res)=>{
