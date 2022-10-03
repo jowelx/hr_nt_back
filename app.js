@@ -13,7 +13,7 @@ const corsOptions ={
     optionSuccessStatus:200
 }
 app.use(cors());
-app.set('port', procersOptiss.env.PORT || 4000)
+app.set('port', process.env.PORT || 4000)
 //middlewares
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }));
