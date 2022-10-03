@@ -7,7 +7,12 @@ import Api from './api/Api.js';
 import axios from 'axios';
 const app =express();
 //setting
-app.use(cors(/*options*/));
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 app.set('port', process.env.PORT || 4000)
 //middlewares
 app.use(morgan('dev'))
