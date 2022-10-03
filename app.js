@@ -9,10 +9,10 @@ const app =express();
 //setting
 const corsOptions ={
     origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
+    credentials:false,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
-app.use(cors());
+app.use(cors(corsOptions));
 app.set('port', process.env.PORT || 4000)
 //middlewares
 app.use(morgan('dev'))
