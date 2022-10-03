@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { Taxes } from "../models/Taxes.js";
 export const getTaxes=(req,res)=>{
+  
         Taxes.find((err,result)  =>{
          err && res.status(500).send(err.message);
         res.status(200).json(result)
