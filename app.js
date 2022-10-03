@@ -14,31 +14,9 @@ app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json({ limit: '500mb' }));
 app.use('/api/bill',Api)
-
-
-app.get("/prometeo",(req,res)=>{
-   // res.send("ok")
-
-
-   const options = {
-    method: 'GET',
-    url: 'https://api.prometeoapi.com/transfer/account-enroll-form?key=null',
-    headers: {Accept: 'application/json', 'X-API-Key': 'sxV6mglNYoOi4tcMOOxrQmI0gw2Cp5uJ7v1uOKMUuUCqyEiIdKdf6jKKSOy0TYCD'}
-  };
-  
-  axios
-    .request(options)
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-   
-})
 //Initialization of database connection and server
 moongose.connect(
-    'mongodb://localhost:27017/marble_db',
+    'mongodb+srv://db-ark-trac:db-ark-trac@cluster0.df8hk.mongodb.net/marble_db?retryWrites=true&w=majority',
     {useNewUrlParser:true},
     (err,res)=>{
         err 
