@@ -24,7 +24,6 @@ export const addBill=(req,res)=>{
 
     console.log(req.body.newBill)
     const data=req.body.newBill
-    res.send("fine")
     let newBill = new Bill({
         date:data.date,
         serial:data.serial,

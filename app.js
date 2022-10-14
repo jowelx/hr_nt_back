@@ -37,7 +37,7 @@ moongose.connect(
         console.log(SUCCESFULL_CONNECTION )
         //starting the server
         app.listen(app.get('port'), () => {
-            console.log(SERVER + app.get('port'));
+            console.log(SERVER +" "+app.get('port'));
           })
     }
 )
