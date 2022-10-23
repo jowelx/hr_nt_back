@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const InventorySchema = new Schema({
-  
+    id:{type:String},
+    date:{type:String},
     name:{type:String},
     amount:{type:String},
     category:{type:String}

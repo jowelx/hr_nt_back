@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 import { Inventory } from "../models/Inventory.js";
-
+import moment from "moment/moment.js";
 export const addInventory=(req,res)=>{
 
     console.log(req.body.values)
     const data=req.body.values
     let newInventory=new Inventory({
+        id:parseInt(Math.random()*1000),
+        date:moment().format(),
         name:data.name,
         amount:data.amount,
         category:data.category

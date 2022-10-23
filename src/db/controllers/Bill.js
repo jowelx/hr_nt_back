@@ -21,10 +21,10 @@ export const findById=(req,res)=>{
 }
 //Añadir facturas
 export const addBill=(req,res)=>{
-
     console.log(req.body.newBill)
     const data=req.body.newBill
     let newBill = new Bill({
+        id:parseInt(Math.random()*1000),
         date:data.date,
         serial:data.serial,
         value:data.value,
@@ -32,7 +32,7 @@ export const addBill=(req,res)=>{
     })
    newBill.save((err,bill)=>{
     err&&res.status(500).send(err.message)
-    res.status(200)
+    res.send(200)
    })
 }
 

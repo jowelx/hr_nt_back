@@ -6,7 +6,8 @@ const BillSchema = new Schema({
     date:{type:String},
     serial:{type:String},
     value:{type:String},
-    type:{type:String}
+    type:{type:String},
+    id:{type:String}
 })
 
 export const Bill = mongoose.model('Bill',BillSchema)

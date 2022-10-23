@@ -42,7 +42,7 @@ export const deleteSettings=async(req,res)=>{
    
     let setting=  Settings.findById(id)
     await setting.remove()
-    res.send({data:"fakiu"})
+    res.send({data:"removido"})
     }
     catch{
         res.status(500).send({error:'book is not found'})
