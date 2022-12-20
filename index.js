@@ -19,8 +19,16 @@ app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ limit: '500mb' }));
 app.use('/api/bill',Api)
-app.get('/',(req,res)=>{
-    res.json({status:'funcionando'})
+app.get('/', async (req,res)=>{
+    try {
+    res.json({
+      status: 200,
+      message: "Get data has successfully",
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send("Server error");
+  }
 })
 
 //Initialization of database connection and server
