@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ limit: '500mb' }));
 app.use('/api/bill',Api)
 app.get('/',(req,res)=>{
-    res.send('funcionando')
+    res.json({status:'funcionando'})
 })
 
 //Initialization of database connection and server
