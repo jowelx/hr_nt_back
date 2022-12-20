@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
 
 //Initialization of database connection and server
 moongose.connect(
-    'mongodb+srv://db-ark-trac:db-ark-trac@cluster0.df8hk.mongodb.net/marble_db?retryWrites=true&w=majority',
+    'mongodb://127.0.0.1:27017/marble_db',
     {useNewUrlParser:true},
     (err,res)=>{
         err 
